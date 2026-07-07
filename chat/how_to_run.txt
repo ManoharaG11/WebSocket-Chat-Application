@@ -1,0 +1,20 @@
+How to run the project (commands)
+==================================
+
+Working directory:
+  c:\Users\mg005\Desktop\websocket pro\chat
+
+1) Set JAVA_HOME (adjust the path if your JDK is elsewhere)
+  set JAVA_HOME=C:\Program Files\Java\jdk-17
+  set PATH=%JAVA_HOME%\bin;%PATH%
+
+2) Start Spring Boot (port 8081)
+  .\mvnw.cmd spring-boot:run -Dspring-boot.run.arguments=--server.port=8081
+
+3) Open the UI in a browser
+  http://localhost:8081/chat.html
+
+If you run from PowerShell and wrapper has trouble resolving JAVA_HOME,
+start via cmd.exe as shown:
+  cmd /c "set JAVA_HOME=C:\Program Files\Java\jdk-17 && set PATH=%JAVA_HOME%\bin;%PATH% && .\mvnw.cmd spring-boot:run -Dspring-boot.run.arguments=--server.port=8081"
+
